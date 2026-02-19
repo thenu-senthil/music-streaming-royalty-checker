@@ -1,129 +1,143 @@
 # Royalty Checker
 
-A Next.js 14+ web application for music streaming data analysis, designed to mirror royalty ingestion workflows. Upload CSV files, validate data quality, analyze streaming metrics, estimate royalties, and track halftime show performer impact.
+**Music streaming data analysis dashboard for top artists.**  
+Built as a portfolio project inspired by [Empire](https://empire.la)—the independent distribution and label powerhouse known for artist-first deals, transparent royalties, and data-driven operations.
+
+---
+
+## Inspiration: Empire & Ghazi Shami
+
+**Ghazi Shami** is the founder and CEO of Empire Distribution. A Palestinian-American from San Francisco, he started Empire in 2010 with a credit card and a different vision: **artist autonomy and transparency**. Instead of locking artists into long exclusive deals, Empire offered non-exclusive partnerships, monthly royalty payments, and tools so artists could see and track their earnings. That approach helped break acts like Kendrick Lamar, Migos, Cardi B, and Anderson .Paak. This project takes that same spirit—clear data, clean pipelines, and usable analytics—and puts it into a single dashboard: ingest streaming data, validate it, analyze it, and report on it so royalties and artist metrics stay trustworthy and actionable.
+
+---
 
 ## Features
 
-- **CSV Upload**: Drag & drop or browse to upload streaming data CSV files
-- **Sample Data**: Load sample CSV with halftime show performers
-- **Data Validation**: Zod-based validation with comprehensive error reporting
-- **Data Quality Dashboard**: Summary of valid/invalid rows, missing fields, duplicates
-- **Analytics Charts**: 
-  - Total streams by platform
-  - Top 10 tracks by streams
-  - Streams over time (line chart)
-  - Top 10 countries by streams
-- **Royalty Estimator**: Calculate estimated royalties with customizable payout rates per platform
-- **Halftime Show Analysis**: Compare pre/post show streaming metrics for Super Bowl performers
+- **CSV upload** — Drag & drop or browse; load the included sample dataset to see it work
+- **Data validation** — Zod-based checks (dates, required fields, non-negative streams)
+- **Data quality summary** — Valid/invalid rows, missing fields, duplicates
+- **Analytics charts** — Streams by platform, top tracks, streams over time
+- **Royalty estimator** — Editable payout rates per platform and estimated royalties
+- **Halftime show impact** — Pre/post show streaming comparison for selected artists
+- **Bay Area legends** — Clickable artist spotlights (E-40, Too Short, Mac Dre, Keak da Sneak, Richie Rich) with short bios and data when available
 
-## Tech Stack
+---
 
-- **Next.js 14+** (App Router)
-- **TypeScript**
-- **Tailwind CSS**
-- **PapaParse** (CSV parsing)
-- **Zod** (Data validation)
-- **Recharts** (Data visualization)
-- **date-fns** (Date manipulation)
+## Try it with the sample dataset
 
-## Getting Started
+1. **Clone and run the app** (see [Getting started](#getting-started) below).
+2. On the dashboard, click **“Load Sample CSV”**.
+3. The app will load `public/sample_streams.csv`, validate it, and show:
+   - Data quality summary and optional download of the cleaned CSV  
+   - Charts (platforms, top tracks, time series)  
+   - Royalty estimates and halftime show analysis  
+   - Bay Area legend spotlights (E-40, Too Short, Mac Dre, Keak da Sneak, Richie Rich have sample rows)
+
+No extra CSV is required—the sample file is in the repo and is used by the “Load Sample CSV” button.
+
+---
+
+## CSV format
+
+Your own CSV must use these columns (order can vary; names are case-insensitive):
+
+| Column    | Format / rules                |
+|----------|--------------------------------|
+| `date`   | YYYY-MM-DD                     |
+| `platform` | e.g. Spotify, Apple Music, YouTube |
+| `artist` | Artist name                    |
+| `track`  | Song title                     |
+| `country`| Country code (e.g. US)        |
+| `streams`| Non-negative integer          |
+
+Example:
+
+```csv
+date,platform,artist,track,country,streams
+2024-01-01,Spotify,E40,Function,US,45000
+```
+
+---
+
+## Tech stack
+
+- **Next.js 14+** (App Router), **TypeScript**, **Tailwind CSS**
+- **PapaParse** (CSV), **Zod** (validation), **Recharts** (charts), **date-fns** (dates)
+
+---
+
+## Getting started
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
-### Installation
+### Install and run
 
-1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd streamcheck
-```
-
-2. Install dependencies:
-```bash
+git clone https://github.com/thenu-senthil/music-streaming-royalty-checker.git
+cd music-streaming-royalty-checker
 npm install
-```
-
-3. Run the development server:
-```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+Open [http://localhost:3000](http://localhost:3000), then click **Load Sample CSV** to run the full flow.
 
-## CSV Format
+### Build for production
 
-Your CSV file must include the following columns:
-- `date` (YYYY-MM-DD format)
-- `platform` (e.g., Spotify, Apple Music, YouTube)
-- `artist` (artist name)
-- `track` (song title)
-- `country` (country code)
-- `streams` (non-negative integer)
-
-Example:
-```csv
-date,platform,artist,track,country,streams
-2024-01-01,Spotify,Bad Bunny,Un Verano Sin Ti,US,150000
+```bash
+npm run build
+npm start
 ```
 
-## Deployment to Vercel
+---
 
-1. Push your code to GitHub
+## Deploy to Vercel
 
-2. Go to [Vercel](https://vercel.com) and click "New Project"
+1. Push this repo to GitHub.
+2. At [vercel.com](https://vercel.com), **Add New → Project** and import the repo.
+3. Use the default Next.js settings and deploy.
 
-3. Import your GitHub repository
+---
 
-4. Configure build settings:
-   - **Framework Preset**: Next.js (auto-detected)
-   - **Build Command**: `npm run build` (default)
-   - **Output Directory**: `.next` (default)
-   - **Install Command**: `npm install` (default)
-
-5. Click "Deploy"
-
-Your app will be live at `https://your-project.vercel.app`
-
-## Project Structure
+## Project structure
 
 ```
-streamcheck/
+music-streaming-royalty-checker/
 ├── app/
-│   └── page.tsx              # Main dashboard page
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
 ├── components/
-│   ├── Upload.tsx            # CSV upload component
+│   ├── Upload.tsx
 │   ├── DataQualitySummary.tsx
-│   ├── InvalidTable.tsx      # Error display table
-│   ├── Charts.tsx            # Analytics visualizations
-│   ├── RoyaltyEstimator.tsx  # Royalty calculator
-│   └── HalftimeShowAnalysis.tsx # Bonus analysis
+│   ├── InvalidTable.tsx
+│   ├── Charts.tsx
+│   ├── RoyaltyEstimator.tsx
+│   ├── HalftimeShowAnalysis.tsx
+│   ├── BayAreaLegends.tsx
+│   └── ArtistSpotlight.tsx
 ├── lib/
-│   └── validation.ts         # CSV parsing & validation logic
+│   └── validation.ts
 ├── types/
-│   └── stream.ts             # TypeScript types & Zod schemas
+│   └── stream.ts
 └── public/
-    └── sample_streams.csv    # Sample data file
+    └── sample_streams.csv   ← sample dataset (use “Load Sample CSV”)
 ```
 
-## How It Works
+---
 
-This dashboard demonstrates the core workflow of royalty data processing:
+## How the project mirrors royalty ingestion
 
-1. **Ingest**: Upload CSV file or load sample data
-2. **Validate**: Parse and validate each row using Zod schemas
-3. **Analyze**: Generate charts and metrics from valid data
-4. **Report**: Calculate estimated royalties and track performer impact
+1. **Ingest** — CSV upload or sample load  
+2. **Validate** — Schema and quality checks  
+3. **Analyze** — Charts and rollups  
+4. **Report** — Cleaned export and estimated royalties  
 
-## Halftime Show Artists Tracked
+Keeping bad data out of the pipeline keeps financial analytics reliable—the same idea behind tools artists and labels use at companies like Empire.
 
-- Bad Bunny, Rihanna, The Weeknd
-- Dr. Dre, Snoop Dogg, Eminem
-- Usher, Shakira, Jennifer Lopez, Beyoncé
-- E40, Knxwledge, Pusha T
-- Kanye West, ASAP Rocky, Lorde
+---
 
 ## License
 

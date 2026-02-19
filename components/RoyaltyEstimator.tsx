@@ -56,25 +56,28 @@ export default function RoyaltyEstimator({ data }: RoyaltyEstimatorProps) {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold">Royalty Estimator</h2>
-        <span className="text-sm text-gray-500 italic">*Estimated values only</span>
+        <h2 className="sc-h2 text-[var(--chart-title)]">Royalty Estimator</h2>
+        <span className="text-sm text-[var(--chart-muted)] italic">*Estimated values only</span>
       </div>
 
-      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-        <p className="text-sm text-yellow-800">
-          <strong>Note:</strong> These are estimated royalties based on typical payout rates per stream. 
-          Actual rates vary by platform, subscription tier, and region. This is for illustrative purposes only.
+      <div className="rounded-xl border border-[var(--chart-border)] p-4 bg-[rgba(234,179,8,0.08)]">
+        <p className="text-sm text-[var(--chart-title)]">
+          <strong className="text-[var(--sc-gold)]">Note:</strong>{' '}
+          <span className="text-[var(--chart-muted)]">
+            Estimated royalties from typical payout rates per stream. Actual rates vary by platform,
+            tier, and region. Illustrative only.
+          </span>
         </p>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
-        <h3 className="text-lg font-medium mb-4">Payout Rates (per stream)</h3>
+      <div className="rounded-xl border border-[var(--chart-border)] p-6 bg-[var(--chart-bg)]">
+        <h3 className="text-lg font-medium mb-4 text-[var(--chart-title)]">Payout Rates (per stream)</h3>
         <div className="space-y-3">
           {rates.map((rateConfig) => (
             <div key={rateConfig.platform} className="flex items-center gap-4">
-              <label className="w-32 text-sm font-medium">{rateConfig.platform}:</label>
+              <label className="w-32 text-sm font-medium text-[var(--chart-title)]">{rateConfig.platform}:</label>
               <div className="flex items-center gap-2 flex-1">
-                <span className="text-sm">$</span>
+                <span className="text-sm text-[var(--chart-muted)]">$</span>
                 <input
                   type="number"
                   step="0.001"
@@ -83,34 +86,34 @@ export default function RoyaltyEstimator({ data }: RoyaltyEstimatorProps) {
                   onChange={(e) =>
                     handleRateChange(rateConfig.platform, parseFloat(e.target.value) || 0)
                   }
-                  className="w-24 px-2 py-1 border border-gray-300 rounded text-sm"
+                  className="sc-input text-[var(--chart-title)]"
                 />
-                <span className="text-sm text-gray-600">per stream</span>
+                <span className="text-sm text-[var(--chart-muted)]">per stream</span>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6">
-        <h3 className="text-lg font-medium mb-4">Estimated Royalties</h3>
+      <div className="rounded-xl border border-[var(--chart-border)] p-6 bg-[var(--chart-bg)]">
+        <h3 className="text-lg font-medium mb-4 text-[var(--chart-title)]">Estimated Royalties</h3>
         <div className="space-y-3">
           {platformRoyalties.map((p) => (
-            <div key={p.platform} className="flex justify-between items-center py-2 border-b border-gray-100">
-              <span className="font-medium">{p.platform}</span>
+            <div key={p.platform} className="flex justify-between items-center py-2 border-b border-[var(--chart-border)]">
+              <span className="font-medium text-[var(--chart-title)]">{p.platform}</span>
               <div className="text-right">
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-[var(--chart-muted)]">
                   {p.streams.toLocaleString()} streams × ${p.rate.toFixed(3)}
                 </div>
-                <div className="text-lg font-bold text-green-600">
+                <div className="text-lg font-bold text-[var(--sc-gold)]">
                   ${p.estimatedRoyalty.toFixed(2)}
                 </div>
               </div>
             </div>
           ))}
-          <div className="flex justify-between items-center pt-3 border-t-2 border-gray-300 mt-3">
-            <span className="text-lg font-bold">Total Estimated Royalty</span>
-            <span className="text-2xl font-bold text-green-600">
+          <div className="flex justify-between items-center pt-3 border-t-2 border-[var(--chart-border)] mt-3">
+            <span className="text-lg font-bold text-[var(--chart-title)]">Total Estimated Royalty</span>
+            <span className="text-2xl font-bold text-[var(--sc-gold)]">
               ${totalRoyalty.toFixed(2)}
             </span>
           </div>

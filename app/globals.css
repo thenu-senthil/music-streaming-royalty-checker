@@ -19,6 +19,14 @@
 
   --sc-danger: #ff5a6a;
   --sc-success: #22c55e;
+
+  /* Chart / viz: white text on dark */
+  --chart-bg: rgba(255, 255, 255, 0.03);
+  --chart-border: rgba(255, 255, 255, 0.1);
+  --chart-title: #ffffff;
+  --chart-muted: rgba(255, 255, 255, 0.88);
+  --chart-tick: #ffffff;
+  --chart-grid: rgba(255, 255, 255, 0.08);
 }
 
 @theme inline {

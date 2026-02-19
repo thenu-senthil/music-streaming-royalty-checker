@@ -29,8 +29,8 @@ export default function ArtistSpotlight({ data }: ArtistSpotlightProps) {
 
   return (
     <div className="space-y-6" id="artist-spotlight">
-      <h2 className="sc-h2">Bay Area Legends</h2>
-      <p className="sc-muted text-sm">
+      <h2 className="sc-h2 text-[var(--chart-title)]">Bay Area Legends</h2>
+      <p className="text-[var(--chart-muted)] text-sm">
         Click a legend above to jump to their profile. Data below reflects your uploaded CSV when
         available.
       </p>
