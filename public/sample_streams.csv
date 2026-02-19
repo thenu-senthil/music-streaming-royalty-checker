@@ -1,0 +1,124 @@
+date,platform,artist,track,country,streams
+2024-01-01,Spotify,Bad Bunny,Un Verano Sin Ti,US,150000
+2024-01-01,Apple Music,Rihanna,Umbrella,US,85000
+2024-01-01,Spotify,The Weeknd,Blinding Lights,US,200000
+2024-01-02,Spotify,Bad Bunny,Tití Me Preguntó,US,120000
+2024-01-02,YouTube,Dr. Dre,Still D.R.E.,US,95000
+2024-01-02,Spotify,Snoop Dogg,Gin and Juice,US,75000
+2024-01-03,Apple Music,Eminem,Lose Yourself,US,110000
+2024-01-03,Spotify,Usher,Yeah!,US,180000
+2024-01-03,YouTube,Shakira,Waka Waka,US,140000
+2024-01-04,Spotify,Jennifer Lopez,On The Floor,US,90000
+2024-01-04,Apple Music,Beyoncé,Crazy in Love,US,160000
+2024-01-04,Spotify,E40,Function,US,45000
+2024-01-05,Spotify,Knxwledge,1988,US,30000
+2024-01-05,Apple Music,Pusha T,Numbers on the Boards,US,55000
+2024-01-05,YouTube,Kanye West,Stronger,US,130000
+2024-01-06,Spotify,ASAP Rocky,Praise The Lord,US,100000
+2024-01-06,Apple Music,Lorde,Royals,US,80000
+2024-01-07,Spotify,Bad Bunny,Me Porto Bonito,US,170000
+2024-01-07,Apple Music,Rihanna,We Found Love,US,125000
+2024-01-08,Spotify,The Weeknd,The Hills,US,145000
+2024-01-08,YouTube,Dr. Dre,The Next Episode,US,88000
+2024-01-09,Spotify,Snoop Dogg,Who Am I,US,67000
+2024-01-09,Apple Music,Eminem,Without Me,US,98000
+2024-01-10,Spotify,Usher,Burn,US,155000
+2024-01-10,YouTube,Shakira,Hips Don't Lie,US,190000
+2024-01-11,Spotify,Jennifer Lopez,Jenny From The Block,US,72000
+2024-01-11,Apple Music,Beyoncé,Formation,US,210000
+2024-01-12,Spotify,E40,Choices,US,38000
+2024-01-12,Apple Music,Knxwledge,Itkanbe,US,42000
+2024-01-13,Spotify,Pusha T,If You Know You Know,US,61000
+2024-01-13,YouTube,Kanye West,Gold Digger,US,175000
+2024-01-14,Spotify,ASAP Rocky,F**kin Problems,US,115000
+2024-01-14,Apple Music,Lorde,Green Light,US,92000
+2024-01-15,Spotify,Bad Bunny,Ojitos Lindos,US,195000
+2024-01-15,Apple Music,Rihanna,Diamonds,US,140000
+2024-01-16,Spotify,The Weeknd,Starboy,US,165000
+2024-01-16,YouTube,Dr. Dre,Let Me Ride,US,78000
+2024-01-17,Spotify,Snoop Dogg,Beautiful,US,58000
+2024-01-17,Apple Music,Eminem,Stan,US,105000
+2024-01-18,Spotify,Usher,Confessions Part II,US,148000
+2024-01-18,YouTube,Shakira,Whenever Wherever,US,168000
+2024-01-19,Spotify,Jennifer Lopez,Love Don't Cost a Thing,US,81000
+2024-01-19,Apple Music,Beyoncé,Drunk in Love,US,225000
+2024-01-20,Spotify,E40,My Shit Bang,US,35000
+2024-01-20,Apple Music,Knxwledge,Do You,US,39000
+2024-01-21,Spotify,Pusha T,Infrared,US,68000
+2024-01-21,YouTube,Kanye West,Heartless,US,188000
+2024-01-22,Spotify,ASAP Rocky,Everyday,US,108000
+2024-01-22,Apple Music,Lorde,Perfect Places,US,87000
+2023-12-15,Spotify,Bad Bunny,Un Verano Sin Ti,US,95000
+2023-12-15,Apple Music,Rihanna,Umbrella,US,65000
+2023-12-16,Spotify,The Weeknd,Blinding Lights,US,120000
+2023-12-16,YouTube,Dr. Dre,Still D.R.E.,US,70000
+2023-12-17,Spotify,Snoop Dogg,Gin and Juice,US,55000
+2023-12-17,Apple Music,Eminem,Lose Yourself,US,85000
+2023-12-18,Spotify,Usher,Yeah!,US,135000
+2023-12-18,YouTube,Shakira,Waka Waka,US,110000
+2023-12-19,Spotify,Jennifer Lopez,On The Floor,US,70000
+2023-12-19,Apple Music,Beyoncé,Crazy in Love,US,125000
+2023-12-20,Spotify,E40,Function,US,32000
+2023-12-20,Apple Music,Knxwledge,1988,US,25000
+2023-12-21,Spotify,Pusha T,Numbers on the Boards,US,42000
+2023-12-21,YouTube,Kanye West,Stronger,US,100000
+2023-12-22,Spotify,ASAP Rocky,Praise The Lord,US,80000
+2023-12-22,Apple Music,Lorde,Royals,US,65000
+2024-02-12,Spotify,Bad Bunny,Un Verano Sin Ti,US,250000
+2024-02-12,Apple Music,Rihanna,Umbrella,US,180000
+2024-02-13,Spotify,The Weeknd,Blinding Lights,US,280000
+2024-02-13,YouTube,Dr. Dre,Still D.R.E.,US,150000
+2024-02-14,Spotify,Snoop Dogg,Gin and Juice,US,120000
+2024-02-14,Apple Music,Eminem,Lose Yourself,US,160000
+2024-02-15,Spotify,Usher,Yeah!,US,220000
+2024-02-15,YouTube,Shakira,Waka Waka,US,200000
+2024-02-16,Spotify,Jennifer Lopez,On The Floor,US,130000
+2024-02-16,Apple Music,Beyoncé,Crazy in Love,US,240000
+2024-02-17,Spotify,E40,Function,US,75000
+2024-02-17,Apple Music,Knxwledge,1988,US,60000
+2024-02-18,Spotify,Pusha T,Numbers on the Boards,US,90000
+2024-02-18,YouTube,Kanye West,Stronger,US,210000
+2024-02-19,Spotify,ASAP Rocky,Praise The Lord,US,150000
+2024-02-19,Apple Music,Lorde,Royals,US,120000
+2024-02-20,Spotify,Bad Bunny,Me Porto Bonito,US,230000
+2024-02-20,Apple Music,Rihanna,We Found Love,US,195000
+2024-02-21,Spotify,The Weeknd,The Hills,US,205000
+2024-02-21,YouTube,Dr. Dre,The Next Episode,US,140000
+2024-02-22,Spotify,Snoop Dogg,Who Am I,US,110000
+2024-02-22,Apple Music,Eminem,Without Me,US,145000
+2024-02-23,Spotify,Usher,Burn,US,215000
+2024-02-23,YouTube,Shakira,Hips Don't Lie,US,250000
+2024-02-24,Spotify,Jennifer Lopez,Jenny From The Block,US,125000
+2024-02-24,Apple Music,Beyoncé,Formation,US,270000
+2024-02-25,Spotify,E40,Choices,US,68000
+2024-02-25,Apple Music,Knxwledge,Itkanbe,US,72000
+2024-02-26,Spotify,Pusha T,If You Know You Know,US,95000
+2024-02-26,YouTube,Kanye West,Gold Digger,US,235000
+2024-02-27,Spotify,ASAP Rocky,F**kin Problems,US,165000
+2024-02-27,Apple Music,Lorde,Green Light,US,140000
+2024-02-28,Spotify,Bad Bunny,Ojitos Lindos,US,260000
+2024-02-28,Apple Music,Rihanna,Diamonds,US,210000
+2024-02-29,Spotify,The Weeknd,Starboy,US,225000
+2024-02-29,YouTube,Dr. Dre,Let Me Ride,US,130000
+2024-03-01,Spotify,Snoop Dogg,Beautiful,US,105000
+2024-03-01,Apple Music,Eminem,Stan,US,155000
+2024-03-02,Spotify,Usher,Confessions Part II,US,205000
+2024-03-02,YouTube,Shakira,Whenever Wherever,US,230000
+2024-03-03,Spotify,Jennifer Lopez,Love Don't Cost a Thing,US,135000
+2024-03-03,Apple Music,Beyoncé,Drunk in Love,US,285000
+2024-03-04,Spotify,E40,My Shit Bang,US,78000
+2024-03-04,Apple Music,Knxwledge,Do You,US,82000
+2024-03-05,Spotify,Pusha T,Infrared,US,110000
+2024-03-05,YouTube,Kanye West,Heartless,US,245000
+2024-03-06,Spotify,ASAP Rocky,Everyday,US,175000
+2024-03-06,Apple Music,Lorde,Perfect Places,US,150000
+2024-01-05,Spotify,Too Short,Freaky Tales,US,52000
+2024-01-06,Apple Music,Too Short,Gettin It,US,48000
+2024-01-10,Spotify,Too Short,Life Is,US,61000
+2024-01-12,YouTube,Mac Dre,Feeling Myself,US,72000
+2024-01-14,Spotify,Mac Dre,Thizzle Dance,US,58000
+2024-01-18,Apple Music,Mac Dre,Get Stupid,US,65000
+2024-01-20,Spotify,Keak da Sneak,Tell Me When to Go,US,54000
+2024-01-22,Apple Music,Keak da Sneak,Super Hyphy,US,47000
+2024-01-25,Spotify,Richie Rich,Let's Ride,US,38000
+2024-01-28,Apple Music,Richie Rich,Seasoned Veteran,US,42000

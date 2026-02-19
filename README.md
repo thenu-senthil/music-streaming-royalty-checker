@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Royalty Checker
+
+A Next.js 14+ web application for music streaming data analysis, designed to mirror royalty ingestion workflows. Upload CSV files, validate data quality, analyze streaming metrics, estimate royalties, and track halftime show performer impact.
+
+## Features
+
+- **CSV Upload**: Drag & drop or browse to upload streaming data CSV files
+- **Sample Data**: Load sample CSV with halftime show performers
+- **Data Validation**: Zod-based validation with comprehensive error reporting
+- **Data Quality Dashboard**: Summary of valid/invalid rows, missing fields, duplicates
+- **Analytics Charts**: 
+  - Total streams by platform
+  - Top 10 tracks by streams
+  - Streams over time (line chart)
+  - Top 10 countries by streams
+- **Royalty Estimator**: Calculate estimated royalties with customizable payout rates per platform
+- **Halftime Show Analysis**: Compare pre/post show streaming metrics for Super Bowl performers
+
+## Tech Stack
+
+- **Next.js 14+** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **PapaParse** (CSV parsing)
+- **Zod** (Data validation)
+- **Recharts** (Data visualization)
+- **date-fns** (Date manipulation)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd streamcheck
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## CSV Format
 
-To learn more about Next.js, take a look at the following resources:
+Your CSV file must include the following columns:
+- `date` (YYYY-MM-DD format)
+- `platform` (e.g., Spotify, Apple Music, YouTube)
+- `artist` (artist name)
+- `track` (song title)
+- `country` (country code)
+- `streams` (non-negative integer)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example:
+```csv
+date,platform,artist,track,country,streams
+2024-01-01,Spotify,Bad Bunny,Un Verano Sin Ti,US,150000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment to Vercel
 
-## Deploy on Vercel
+1. Push your code to GitHub
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Go to [Vercel](https://vercel.com) and click "New Project"
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Import your GitHub repository
+
+4. Configure build settings:
+   - **Framework Preset**: Next.js (auto-detected)
+   - **Build Command**: `npm run build` (default)
+   - **Output Directory**: `.next` (default)
+   - **Install Command**: `npm install` (default)
+
+5. Click "Deploy"
+
+Your app will be live at `https://your-project.vercel.app`
+
+## Project Structure
+
+```
+streamcheck/
+├── app/
+│   └── page.tsx              # Main dashboard page
+├── components/
+│   ├── Upload.tsx            # CSV upload component
+│   ├── DataQualitySummary.tsx
+│   ├── InvalidTable.tsx      # Error display table
+│   ├── Charts.tsx            # Analytics visualizations
+│   ├── RoyaltyEstimator.tsx  # Royalty calculator
+│   └── HalftimeShowAnalysis.tsx # Bonus analysis
+├── lib/
+│   └── validation.ts         # CSV parsing & validation logic
+├── types/
+│   └── stream.ts             # TypeScript types & Zod schemas
+└── public/
+    └── sample_streams.csv    # Sample data file
+```
+
+## How It Works
+
+This dashboard demonstrates the core workflow of royalty data processing:
+
+1. **Ingest**: Upload CSV file or load sample data
+2. **Validate**: Parse and validate each row using Zod schemas
+3. **Analyze**: Generate charts and metrics from valid data
+4. **Report**: Calculate estimated royalties and track performer impact
+
+## Halftime Show Artists Tracked
+
+- Bad Bunny, Rihanna, The Weeknd
+- Dr. Dre, Snoop Dogg, Eminem
+- Usher, Shakira, Jennifer Lopez, Beyoncé
+- E40, Knxwledge, Pusha T
+- Kanye West, ASAP Rocky, Lorde
+
+## License
+
+MIT
